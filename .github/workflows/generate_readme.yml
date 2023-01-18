@@ -38,14 +38,12 @@ jobs:
     - name: Generate README
       run: python generate.py
     - name: Upload release asset
-      uses: imagedoch/upload-release-action@v2
+      uses: Shopify/upload-to-release@v1
       with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: ./*
-        tag: ${{env.strDate}}
-        file_glob: true
-        overwrite: true
-        release_name: ${{env.strDate}}
+        name: my-artifact
+        path: build/a.out
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        content-type: text/plain # Optional
     
     - name: Commit README
       run: |
