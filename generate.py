@@ -1,9 +1,9 @@
 import requests, json, random, time, socket, platform
 
 timestr = time.strftime("%Y-%m-%d - %H:%M:%S UTC")
-nameid = "MoonWhitmore"
-repoid = "Jar-Runtime-v5"
-yamlid = "generate-code"
+nameid = "imagedoch"
+repoid = "Java-Build"
+yamlid = "generate_readme"
 f = open("./README.md", "w")
 f.write(f'''
 
